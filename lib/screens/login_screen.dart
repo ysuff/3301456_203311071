@@ -57,7 +57,7 @@ class LoginScreen extends StatelessWidget {
                       width: 0,
                       height: 50.h,
                     ),
-                    const PrimaryButtonWidget(title: "Giriş", path: "/login"),
+                    const PrimaryButtonWidget(title: "Giriş", path: "/home"),
                     SizedBox(
                       width: 0,
                       height: 20.h,

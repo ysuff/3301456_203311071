@@ -1,3 +1,4 @@
+import 'package:amdb/screens/home_screen.dart';
 import 'package:amdb/screens/login_screen.dart';
 import 'package:amdb/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +31,8 @@ class MyApp extends StatelessWidget {
           initialRoute: "/",
           routes: {
             "/": (context) => WelcomeScreen(),
-            "/login": (context) => LoginScreen()
+            "/login": (context) => LoginScreen(),
+            "/home": (context) => HomeScreen(),
           }),
     );
   }
