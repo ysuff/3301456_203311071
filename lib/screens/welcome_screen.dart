@@ -10,19 +10,32 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          width: ScreenUtil().screenWidth,
-          color: Colors.white,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
-              AMDbLogoWidget(),
-              PrimaryButtonWidget(title: "Giriş", path: "/login"),
-            ],
+      body: Stack(
+        children: [
+          Container(
+            width: ScreenUtil().screenWidth,
+            height: ScreenUtil().screenHeight,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage("assets/images/yeter.jpg"),
+              ),
+            ),
           ),
-        ),
+          SafeArea(
+            child: Container(
+              width: ScreenUtil().screenWidth,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  AMDbLogoWidget.flatLogo(false),
+                  PrimaryButtonWidget(title: "Giriş", path: "/login"),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

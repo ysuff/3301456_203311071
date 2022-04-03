@@ -26,7 +26,7 @@ class AMDbLogoWidget extends StatelessWidget {
       width: isAppbar?null:200.w,
       height: 100.h,
       decoration: BoxDecoration(
-        color: Colors.amber,
+        color: Colors.amber.withOpacity(0.5),
         borderRadius: BorderRadius.all(
           Radius.circular(20.r),
         ),
@@ -35,7 +35,7 @@ class AMDbLogoWidget extends StatelessWidget {
         "AMDb",
         style: TextStyle(
           color: Colors.black,
-          fontSize: 50.sp,
+          fontSize: 55.sp,
           fontWeight: FontWeight.bold,
         ),
       ),

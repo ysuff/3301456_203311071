@@ -1,5 +1,9 @@
+import 'package:amdb/screens/app_frame.dart';
+import 'package:amdb/screens/films_screen.dart';
 import 'package:amdb/screens/home_screen.dart';
 import 'package:amdb/screens/login_screen.dart';
+import 'package:amdb/screens/profile.dart';
+import 'package:amdb/screens/register_screen.dart';
 import 'package:amdb/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -32,7 +36,8 @@ class MyApp extends StatelessWidget {
           routes: {
             "/": (context) => WelcomeScreen(),
             "/login": (context) => LoginScreen(),
-            "/home": (context) => HomeScreen(),
+            "/register": (context) => RegisterScreen(),
+            "/app":(context )=>AppFrame(),
           }),
     );
   }

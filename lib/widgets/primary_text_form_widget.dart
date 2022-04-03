@@ -12,7 +12,7 @@ class PrimaryTextFormWidget extends StatelessWidget {
       controller: controller,
       decoration: InputDecoration(
         filled: true,
-        hintText: hint,
+        hintText: hint,hintStyle: TextStyle(color: Colors.white),
         border: const OutlineInputBorder(
           borderRadius:
           BorderRadius.all(Radius.circular(20.0)),
