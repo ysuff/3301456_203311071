@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -10,8 +9,10 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Profill" ,style: TextStyle(fontWeight: FontWeight.w600, color: Colors.black),),
-        backgroundColor: Colors.amber,
+        title: Text("Profill" ,style: TextStyle(fontWeight: FontWeight.w600, color: Colors.amber),),
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.amber,
+        automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         child: SafeArea(
@@ -26,20 +27,28 @@ class ProfilePage extends StatelessWidget {
                   Container(
                     child: Column(
                       children: [
-                        menu_get(
-                          context,
-                          Icons.account_circle_sharp,
-                          "Hesap Ayarları",
+                        InkWell(
+                          onTap: ()=>Navigator.of(context).pushNamed("/exit"),
+                          child: menu_get(
+                            context,
+                            Icons.account_circle_sharp,
+                            "Hesap Ayarları",
+                          ),
                         ),
+                        
                         Divider(
                           color: Colors.grey[700],
                           height: 26,
                         ),
-                        menu_get(
-                          context,
-                          Icons.security,
-                          "Güvenlik",
+                        InkWell(
+                          onTap: ()=>Navigator.of(context).pushNamed("/security"),
+                          child: menu_get(
+                            context,
+                            Icons.security,
+                            "Güvenlik",
+                          ),
                         ),
+                        
                         Divider(
                           color: Colors.grey[700],
                           height: 26,
@@ -53,11 +62,15 @@ class ProfilePage extends StatelessWidget {
                           color: Colors.grey[700],
                           height: 26,
                         ),
-                        menu_get(
-                          context,
-                          Icons.help_outline,
-                          "Yardım ve Destek",
+                        InkWell(
+                          onTap: ()=>Navigator.of(context).pushNamed("/help"),
+                          child: menu_get(
+                            context,
+                            Icons.help_outline,
+                            "Yardım ve Destek",
+                          ),
                         ),
+
                         Divider(
                           color: Colors.grey[700],
                           height: 26,

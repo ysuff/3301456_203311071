@@ -12,16 +12,11 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
         title: AMDbLogoWidget.flatLogo(true),
-        actions: [
-          Icon(
-            Icons.search,
-            size: 40.h,
-            color: Colors.black,
-          )
-        ],
+        actions:
+        [],
       ),
 
       backgroundColor: Colors.white,

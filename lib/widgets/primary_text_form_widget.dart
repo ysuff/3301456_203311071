@@ -9,8 +9,10 @@ class PrimaryTextFormWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      style: TextStyle(color: Colors.white),
       controller: controller,
       decoration: InputDecoration(
+
         filled: true,
         hintText: hint,hintStyle: TextStyle(color: Colors.white),
         border: const OutlineInputBorder(

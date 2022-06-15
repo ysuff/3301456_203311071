@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "615059940030",
+    "project_id": "amdbuygulama",
+    "storage_bucket": "amdbuygulama.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:615059940030:android:7216d858736f9a556c34ef",
+        "android_client_info": {
+          "package_name": "com.example.amdb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "615059940030-671jvoh8iq28me338o5l3sc3l3rq6ch4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUl26_xGS9TLJzUvsV6kXwv5sJI3Eos9g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "615059940030-671jvoh8iq28me338o5l3sc3l3rq6ch4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

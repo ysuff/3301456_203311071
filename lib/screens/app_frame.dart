@@ -34,7 +34,7 @@ class _AppFrameState extends State<AppFrame> {
         currentIndex: _index,
         onTap: _onItemTapped,
         elevation: 12,
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.white,
         items: const [
           BottomNavigationBarItem(
               label: "Ana Ekran", icon: Icon(Icons.account_balance_sharp)),

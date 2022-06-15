@@ -1,6 +1,7 @@
 import 'package:amdb/widgets/amdb_logo_widget.dart';
 import 'package:amdb/widgets/primary_button_widget.dart';
 import 'package:amdb/widgets/primary_text_form_widget.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -8,7 +9,7 @@ class LoginScreen extends StatelessWidget {
   LoginScreen({Key? key}) : super(key: key);
   TextEditingController emailControler = TextEditingController();
   TextEditingController passwordControler = TextEditingController();
-
+  FirebaseFunctions deneme = FirebaseFunctions();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,13 +65,34 @@ class LoginScreen extends StatelessWidget {
                         width: 0,
                         height: 50.h,
                       ),
-                       const PrimaryButtonWidget(title: "Giriş", path: "/app"),
+                      ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            elevation: 15,
+                            primary: Colors.amber,
+                          ),
+                          onPressed: () => deneme.loginFunc(emailControler.text,
+                              passwordControler.text, context,"/app"),
+                          child: Text(
+                            "Giriş",
+                            style:
+                                TextStyle(fontSize: 30.sp, color: Colors.black),
+                          )),
                       SizedBox(
                         width: 0,
                         height: 20.h,
                       ),
-                       const PrimaryButtonWidget(
-                          title: "Kayıt Ol", path: "/register"),
+                      ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            elevation: 15,
+                            primary: Colors.amber,
+                          ),
+                          onPressed: () =>
+                              Navigator.pushNamed(context, "/register"),
+                          child: Text(
+                            "Kayıt Ol",
+                            style:
+                                TextStyle(fontSize: 30.sp, color: Colors.black),
+                          )),
                       SizedBox(
                         width: 0,
                         height: 70.h,
